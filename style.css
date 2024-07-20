@@ -35,7 +35,6 @@ header{
 
 .navlist {
     display: flex; /*esto sirve para que los elementos de la lista UL se pongan en linea*/
-    
 }
 
 .navlist a {
@@ -58,14 +57,11 @@ header{
     font-size: 35px;
     z-index: 101; /* para que este sobre el header*/
     cursor: pointer; /*para que aparezca la manito cuando ponemos el mouse por encima*/
+    display: block;
 }
 
 #menu-toggle{
     display: none; /*nunca quiero que se vea el checkbox*/
-}
-
-.menu-icon-action{
-    display: none; /*para que no se le pueda hacer click*/
 }
 
 .hero{
@@ -113,7 +109,7 @@ section{
     width: 600px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: all 5s linear; /*esto ahce que la transcicion sea lineal*/
+    transition: all 5s linear; /*esto hace que la transcicion sea lineal*/
 }
 
 .hero-img img:hover{
@@ -217,7 +213,7 @@ section{
 
 @media (max-width: 768px){
 
-    .menu-icon-action {
+    #menu.icon{
         display: block;
     }
     .hero-text {
@@ -249,7 +245,7 @@ section{
         display: block;
         margin: 7px 0;
     }
-    #menu-toggle:checked + label.menu-icon-action + ul {
+    .navlist.open {
         right: 0;
     }
 }
